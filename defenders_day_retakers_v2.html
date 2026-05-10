@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Retakers – Defenders' Day</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{
+  width:100%;min-height:100vh;
+  background:radial-gradient(ellipse at 50% 30%, #6B0A0A 0%, #3A0404 40%, #0D0000 100%);
+  font-family:'Jost',sans-serif;
+  color:#F5DDD8;
+  overflow-x:hidden;
+}
+.stars{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+.star{position:absolute;background:rgba(255,200,180,0.9);border-radius:50%;animation:tw var(--d) ease-in-out infinite alternate;opacity:0;}
+@keyframes tw{from{opacity:0;}to{opacity:var(--o);}}
+
+.page{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:0 20px 70px;}
+
+.top-line{
+  display:flex;align-items:center;gap:10px;justify-content:center;
+  padding:28px 0 20px;width:100%;max-width:580px;
+}
+.tl{flex:1;height:1px;background:rgba(245,200,190,0.25);}
+.td{width:4px;height:4px;background:rgba(245,200,190,0.5);border-radius:50%;}
+
+.group-name{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(64px,18vw,110px);
+  color:#F5DDD8;
+  line-height:1;
+  text-align:center;
+  animation:fadeUp 1.2s cubic-bezier(0.22,1,0.36,1) both;
+  margin-bottom:4px;
+  text-shadow: 0 0 60px rgba(180,40,40,0.6);
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+.name-rule{
+  display:flex;align-items:center;gap:10px;justify-content:center;
+  width:100%;max-width:440px;
+  margin-bottom:32px;
+  animation:fadeUp 1.2s 0.15s both;
+}
+.nr{flex:1;height:1px;background:rgba(245,200,190,0.4);}
+.nd{width:5px;height:5px;background:rgba(245,200,190,0.5);border-radius:50%;}
+
+.tagline{
+  font-family:'Jost',sans-serif;
+  font-size:10px;font-weight:500;
+  letter-spacing:4px;text-transform:uppercase;
+  color:rgba(245,200,190,0.55);
+  text-align:center;
+  margin-bottom:44px;
+  animation:fadeUp 1.2s 0.25s both;
+}
+
+.invite-block{
+  max-width:520px;width:100%;
+  text-align:center;
+  margin-bottom:44px;
+  animation:fadeUp 1.2s 0.35s both;
+}
+.invite-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(22px,5vw,34px);
+  font-weight:300;font-style:italic;
+  color:#F5DDD8;
+  line-height:1.4;
+  margin-bottom:16px;
+}
+.invite-body{
+  font-size:14px;font-weight:300;line-height:2;
+  color:rgba(245,200,190,0.6);
+}
+
+.divider{display:flex;align-items:center;gap:14px;justify-content:center;margin:8px 0 36px;}
+.dl{flex:1;max-width:70px;height:1px;background:rgba(245,200,190,0.2);}
+.ds{color:rgba(245,200,190,0.5);font-size:12px;}
+
+.details{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:rgba(245,200,190,0.08);
+  border:1px solid rgba(245,200,190,0.12);
+  max-width:520px;width:100%;
+  margin-bottom:44px;
+  animation:fadeUp 1.2s 0.5s both;
+}
+.dc{
+  background:rgba(10,0,0,0.55);
+  padding:26px 12px;text-align:center;
+}
+.dc-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(245,200,190,0.4);margin-bottom:8px;}
+.dc-value{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-weight:400;
+  color:#F5DDD8;line-height:1.1;
+}
+
+.closing{
+  text-align:center;
+  animation:fadeUp 1.2s 0.65s both;
+}
+.closing-main{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(26px,7vw,44px);
+  color:rgba(245,200,190,0.7);
+  margin-bottom:6px;
+}
+.closing-sub{
+  font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  color:rgba(245,200,190,0.3);
+}
+
+@media(max-width:480px){
+  .details{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="page">
+
+  <div class="top-line"><div class="tl"></div><div class="td"></div><div class="tl"></div></div>
+
+  <h1 class="group-name">Retakers</h1>
+
+  <div class="name-rule"><div class="nr"></div><div class="nd"></div><div class="nr"></div></div>
+
+  <p class="tagline">Kazakhstan · Defenders' Day · 7 May</p>
+
+  <div class="invite-block">
+    <p class="invite-heading">"You are our most special guest<br>of this evening"</p>
+    <p class="invite-body">
+      We warmly invite you to a celebration full of laughter,<br>
+      warm atmosphere and unforgettable moments.<br>
+      Wishing you health, joy and bright achievements ✨
+    </p>
+  </div>
+
+  <div class="divider"><div class="dl"></div><span class="ds">✦</span><div class="dl"></div></div>
+
+  <div class="details">
+    <div class="dc">
+      <div class="dc-label">Date</div>
+      <div class="dc-value">May 14, 2026</div>
+    </div>
+    <div class="dc">
+      <div class="dc-label">Time</div>
+      <div class="dc-value">16:00</div>
+    </div>
+    <div class="dc">
+      <div class="dc-label">Venue</div>
+      <div class="dc-value">SDU</div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <p class="closing-main">We are waiting for you ✨</p>
+    <p class="closing-sub">With love · Retakers</p>
+  </div>
+
+</div>
+
+<script>
+const s=document.getElementById('stars');
+for(let i=0;i<90;i++){
+  const el=document.createElement('div');
+  el.className='star';
+  const sz=Math.random()*2+0.5;
+  el.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${sz}px;height:${sz}px;--o:${(Math.random()*0.5+0.1).toFixed(2)};--d:${(Math.random()*5+2).toFixed(1)}s;animation-delay:${(Math.random()*6).toFixed(1)}s;`;
+  s.appendChild(el);
+}
+</script>
+</body>
+</html>
